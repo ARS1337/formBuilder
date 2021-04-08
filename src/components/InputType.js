@@ -4,7 +4,7 @@ function InputType(props) {
   const { type, id } = props;
   return (
     <>
-      <input type={type} id={id} value="untitled" />
+      <input type={type} id={id} value="untitled" readOnly="readOnly" />
     </>
   );
 }
