@@ -5,10 +5,14 @@ import { ItemTypes } from "../utils/itemTypes";
 function Button(props) {
   const { buttonName } = props;
   const [{ isDragging }, drag] = useDrag(() => ({
-    item: {
-      name: buttonName,
-    },
+    item: { name: buttonName },
     type: ItemTypes.type1,
+    end: (item, monitor) => {
+      const dropResult = monitor.getDropResult();
+      if (item && dropResult) {
+        // alert(`You dropped ${item.name}`);
+      }
+    },
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),

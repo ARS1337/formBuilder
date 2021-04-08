@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 
 function Display(props) {
-  const data = ["single label", "gggg", "dfsdfdsf"];
+  const data = ["InputType", "InputType", "Label", "Label"];
   return (
     <div className="Display">
       {data.map((x, idx) => (
