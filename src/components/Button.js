@@ -3,9 +3,9 @@ import { useDrag } from "react-dnd";
 import { ItemTypes } from "../utils/itemTypes";
 
 function Button(props) {
-  const { buttonName } = props;
+  const { buttonName, type } = props;
   const [{ isDragging }, drag] = useDrag(() => ({
-    item: { name: buttonName },
+    item: { name: buttonName, type: type },
     type: ItemTypes.type1,
     end: (item, monitor) => {
       const dropResult = monitor.getDropResult();
@@ -28,7 +28,7 @@ function Button(props) {
       }}
       id={buttonName}
     >
-      {buttonName ? buttonName : "untitled"}
+      {buttonName ? buttonName + " " + type : "untitled"}
     </button>
   );
 }

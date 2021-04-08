@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 function InputType(props) {
+  const { type, id } = props;
   return (
     <>
-      <input type={props.type} id={props.id} value="sfsf" />
+      <input type={type} id={id} value="untitled" />
     </>
   );
 }

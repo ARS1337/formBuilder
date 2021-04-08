@@ -24,7 +24,6 @@ function Label(props) {
           fontWeight: "bold",
           cursor: "move",
         }}
-        value="dfs"
       >
         {props.children ? props.children : "untitled"}
       </label>
