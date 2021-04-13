@@ -38,8 +38,6 @@
 }
 
 .App {
-  display: flex;
-  flex-direction: row;
 }
 .Builder,
 .Display {
@@ -53,4 +51,26 @@
   background-color: rgb(158, 139, 139);
   width: 50%;
   font-size: medium;
+}
+li {
+  list-style-type: none;
+}
+.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 30px;
+  background: #d3e0e4;
+  padding: 5px;
+  margin: 5px 0px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+}
+.bottom > * {
+  padding: 5px;
+  margin: 5px;
 }

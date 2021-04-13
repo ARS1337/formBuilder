@@ -23,14 +23,14 @@ function Display(props) {
     { name: "InputType", type: "week" },
   ];
   return (
-    <div className="Display">
+    <ul className="Display">
       {data.map((x, idx) => (
-        <>
+        <li key={idx}>
           <Button buttonName={x.name} type={x.type} key={idx} />
           <br />
-        </>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
